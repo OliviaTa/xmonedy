@@ -24,13 +24,9 @@
                 </ul>
             </div>
             <div class="header-social col-1">
-                <div class="row">
-                    <div class="col">
-                        <div class="social"></div>
-                    </div>
-                    <div class="col">
-                        <div class="social"></div>
-                    </div>
+                <div class="social-block">
+                    <div class="social"></div>
+                    <div class="social"></div>
                 </div>
             </div>
         </div>
@@ -96,30 +92,37 @@
         </div>
     </div>
     <div class="subscribe container">
-        <div class="row">
+        <div class="row justify-content-between">
             <div class="col">
                 <p>Наш проект сейчас находится в разработке и, если ты хочешь стать одним из первых его пользователей, просто оставь свой e-mail и мы оповестим тебя о запуске!</p>
                 <p>А если есть вопросы и предложения то можешь смело писать их в поле "Ваш комментарий".</p>
             </div>
             <div class="col">
                 <form class="subscribe-form">
-                    <input type="text" name="email" id="email">
-                    <textarea name="comment" id="comment"></textarea><input class="btn" type="submit" value="Я бы попробовал!">
+                    <input type="text" name="email" id="email" placeholder="E-mail">
+                    <textarea name="comment" id="comment" placeholder="Ваш комментарий"></textarea>
+                    <input class="btn" type="submit" value="Я бы попробовал!">
                 </form>
             </div>
         </div>
     </div>
     <div class="page-footer">
-        <div class="footer-left">
-            <div class="name">
-                X-Monedy
+        <div class="container">
+            <div class="row">
+                <div class="footer-left col">
+                    <div class="name">
+                        X-Monedy
+                    </div>
+                    <p>Текст</p>
+                </div>
+                <div class="footer-social col-3">
+                    <p>Подписывайтесь</p>
+                    <div class="social-block">
+                        <div class="social"></div>
+                        <div class="social"></div>
+                    </div>
+                </div>
             </div>
-            <p>Текст</p>
-        </div>
-        <div class="footer-social">
-            <p>Подписывайтесь</p>
-            <div class="social"></div>
-            <div class="social"></div>
         </div>
     </div>
 </body>
