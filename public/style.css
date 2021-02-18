@@ -13,22 +13,11 @@ body {
     background-color: white;
 }
 
-.container-fluid,
 .container {
-    padding: 0;
-}
-
-.row {
-    margin-right: -10px;
-    margin-left: -10px;
-}
-
-.col,
-.col-1,
-.col-2,
-.col-3 {
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 90%;
+    max-width: 1180px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 h2 {
@@ -46,6 +35,7 @@ p {
 .page-header {
     margin-top: 30px;
     margin-bottom: 30px;
+    display: flex;
 }
 
 .img-logo {
@@ -54,17 +44,33 @@ p {
     height: 30px;
     background-color: #E62117;
     border-radius: 8px;
+    margin-right: 10px;
 }
 
 .name-logo {
     display: inline-block;
     font-size: 24px;
     font-weight: 500;
+    margin-right: 126px;
 }
 
 .main-nav,
 .problems-list {
     list-style: none;
+}
+
+.main-nav {
+    display: flex;
+    flex-grow: 1;
+    padding: 0;
+}
+
+.main-nav li {
+    margin-right: 27px;
+}
+
+.main-nav li:last-child {
+    margin-right: 0;
 }
 
 .main-nav a {
@@ -80,6 +86,31 @@ p {
 
 .main-nav a:active {
     color: #554d4b;
+}
+
+.page-header .menu-icon {
+    display: none;
+}
+
+.menu-icon .icon-item {
+    width: 35px;
+    height: 5px;
+    background-color: #030303;
+    margin: 6px 0;
+    margin-left: auto;
+    transition: 0.4s;
+}
+
+.menu-icon.change .icon-item:first-child {
+    transform: rotate(-45deg) translate(-8px, 10px);
+}
+
+.menu-icon.change .icon-item:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.change .icon-item:last-child {
+    transform: rotate(45deg) translate(-5px, -7px);
 }
 
 .social-block {
@@ -99,6 +130,10 @@ p {
     margin-right: 0;
 }
 
+.video img {
+    display: block;
+}
+
 .intro,
 .todo,
 .page-footer {
@@ -112,6 +147,12 @@ p {
 
 .intro h2 {
     margin-bottom: 20px;
+}
+
+.intro .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .problems-list {
@@ -200,21 +241,32 @@ p {
 
 .todo-list ol {
     counter-reset: todoCounter;
+    position: relative;
+    padding: 0;
+}
+
+.todo-list ol:before {
+    content: "";
+    height: 100%;
+    border: 1px solid #030303;
+    position: absolute;
+    left: 50%;
 }
 
 .todo-item {
     position: relative;
     list-style: none;
-    width: 50%;
+    width: calc((100% - 184px) / 2);
 }
 
 .todo-item:nth-child(odd) {
-    transform: translateX(100%);
+    margin-left: calc(50% + 52px);
     padding-left: 40px;
 }
 
 .todo-item:nth-child(even) {
-    transform: translateX(-100px);
+    margin-left: auto;
+    margin-right: calc(50% + 52px);
     text-align: right;
     padding-right: 40px;
 }
@@ -234,34 +286,11 @@ p {
 }
 
 .todo-item:nth-child(odd)::before {
-    left: 0;
-    transform: translateX(-100px);
+    left: -104px;
 }
 
 .todo-item:nth-child(even)::before {
-    right: 0;
-    transform: translateX(100px);
-}
-
-.todo-item::after {
-    content: "";
-    height: 155px;
-    border: 1px solid #030303;
-    position: absolute;
-}
-
-.todo-item:last-child::after {
-    display: none;
-}
-
-.todo-item:nth-child(odd)::after {
-    left: -50px;
-    top: 100px;
-}
-
-.todo-item:nth-child(even)::after {
-    right: -50px;
-    top: 100px;
+    right: -104px;
 }
 
 .todo-item h3 {
@@ -361,4 +390,74 @@ p {
     font-size: 24px;
     line-height: 29px;
     margin-bottom: 20px;
+}
+
+@media only screen and (max-device-width: 1000px) {
+    .page-header .main-nav,
+    .page-header .header-social {
+        display: none;
+    }
+    body.change {
+        overflow: hidden;
+    }
+    .page-header .main-nav.change {
+        display: block;
+        position: absolute;
+        background: white;
+        width: 100%;
+        height: 100vh;
+        top: 97px;
+        left: 0;
+        z-index: 1;
+        padding-left: 5%;
+    }
+    .page-header .main-nav.change {
+        padding-top: 24px;
+    }
+    .page-header .main-nav.change li {
+        margin-bottom: 24px;
+    }
+    .page-header .main-nav.change li:last-child {
+        margin-bottom: none;
+    }
+    .page-header .main-nav.change a {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .page-header .menu-icon {
+        float: right;
+        display: block;
+        margin-left: auto;
+    }
+    .intro .container {
+        grid-template-columns: 100%;
+    }
+    .intro .like-games {
+        text-align: center;
+    }
+    .todo-list ol:before {
+        left: 52px;
+    }
+    .todo-item {
+        width: calc(100% - 144px);
+    }
+    .todo-item:nth-child(odd) {
+        margin-left: 104px;
+    }
+    .todo-item:nth-child(even) {
+        margin-left: 104px;
+        margin-right: 0;
+        text-align: left;
+        padding-right: 0;
+        padding-left: 40px;
+    }
+    .todo-item:nth-child(even)::before {
+        left: -104px;
+    }
+}
+
+@media only screen and (max-device-width: 500px) {
+    .btn {
+        width: 100%;
+    }
 }
