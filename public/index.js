@@ -8,9 +8,3 @@ menuIcon.onclick = function() {
     mainNav.classList.toggle('change');
     body.classList.toggle('change');
 }
-
-// correct line in todo
-let lastTodoLi = document.querySelector('.todo-list .todo-item:last-of-type');
-let heightLastTodoLi = lastTodoLi.offsetHeight;
-let todoBefore = document.querySelector('.todo-list ol:before');
-console.log(todoBefore);

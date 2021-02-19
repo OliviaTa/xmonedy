@@ -20,6 +20,18 @@ body {
     margin-left: auto;
 }
 
+.grid-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media only screen and (max-device-width: 1000px) {
+    .grid-cols {
+        grid-template-columns: 100%;
+    }
+}
+
 h2 {
     font-size: 32px;
     font-weight: 500;
@@ -149,12 +161,6 @@ p {
     margin-bottom: 20px;
 }
 
-.intro .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
 .problems-list {
     line-height: 24px;
     padding-left: 30px;
@@ -245,14 +251,6 @@ p {
     padding: 0;
 }
 
-.todo-list ol:before {
-    content: "";
-    height: 100%;
-    border: 1px solid #030303;
-    position: absolute;
-    left: 50%;
-}
-
 .todo-item {
     position: relative;
     list-style: none;
@@ -283,6 +281,7 @@ p {
     background-color: white;
     border: 2px solid #030303;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .todo-item:nth-child(odd)::before {
@@ -291,6 +290,26 @@ p {
 
 .todo-item:nth-child(even)::before {
     right: -104px;
+}
+
+.todo-item::after {
+    content: "";
+    height: calc(100% + 36px);
+    border: 1px solid #030303;
+    position: absolute;
+    top: 0;
+}
+
+.todo-item:last-child::after {
+    display: none;
+}
+
+.todo-item:nth-child(odd)::after {
+    left: -52px;
+}
+
+.todo-item:nth-child(even)::after {
+    right: -52px;
 }
 
 .todo-item h3 {
@@ -319,7 +338,7 @@ p {
 }
 
 .subscribe-form {
-    text-align: right;
+    text-align: center;
 }
 
 .subscribe-form input[type="text"],
@@ -331,6 +350,7 @@ p {
     border: 1px solid #cccccc;
     border-radius: 2px;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .subscribe-form input[type="text"]:hover,
@@ -361,13 +381,14 @@ p {
     resize: none;
 }
 
-.subscribe-form .btn {
-    margin-right: 0;
-}
-
 .page-footer {
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+.page-footer .container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .page-footer .name {
@@ -429,14 +450,8 @@ p {
         display: block;
         margin-left: auto;
     }
-    .intro .container {
-        grid-template-columns: 100%;
-    }
     .intro .like-games {
         text-align: center;
-    }
-    .todo-list ol:before {
-        left: 52px;
     }
     .todo-item {
         width: calc(100% - 144px);
@@ -454,10 +469,55 @@ p {
     .todo-item:nth-child(even)::before {
         left: -104px;
     }
+    .todo-item:nth-child(even)::after {
+        left: -52px;
+        width: 0;
+    }
+    .subscribe-form {
+        padding-top: 50px;
+    }
+    .subscribe-form input[type="text"],
+    .subscribe-form textarea,
+    .subscribe-form .btn {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-device-width: 500px) {
     .btn {
         width: 100%;
+    }
+    .subscribe p {
+        text-align: center;
+    }
+    .page-footer .footer-left {
+        display: none;
+    }
+    .page-footer .footer-social {
+        width: 100%;
+        text-align: center;
+    }
+    .page-footer .social-block {
+        justify-content: center;
+    }
+    .page-footer .social {
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-device-width: 400px) {
+    .todo-item {
+        margin-left: 0 !important;
+        padding-top: 104px;
+        padding-left: 0 !important;
+        text-align: center !important;
+        width: 100%;
+    }
+    .todo-item:before {
+        left: calc(50% - 52px) !important;
+        top: 0 !important;
+    }
+    .todo-item::after {
+        display: none;
     }
 }

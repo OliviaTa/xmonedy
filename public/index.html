@@ -33,7 +33,7 @@
         <img src="assets/img/Video.jpg" alt="Counter Strike: Global Offensive" width="100%">
     </div>
     <div class="intro">
-        <div class="container">
+        <div class="container grid-cols">
             <div class="like-games">
                 <h2>Любишь играть?</h2>
                 <p>Если ты зашел на эту страницу, значит у тебя есть интерес к видеоиграм.<br>Скорее всего, ты проводишь много времени играя и был бы не против получать от этого какой-то доход. Думаем, ты знаешь, что есть отличный способ <b>заработать</b>                    на этом хобби - монетизация видео на YouTube.
@@ -91,36 +91,30 @@
             </div>
         </div>
     </div>
-    <div id="form" class="subscribe container">
-        <div class="row justify-content-between">
-            <div class="col">
-                <p>Наш проект сейчас находится в разработке и, если ты хочешь стать одним из первых его пользователей, просто оставь свой e-mail и мы оповестим тебя о запуске!</p>
-                <p>А если есть вопросы и предложения то можешь смело писать их в поле "Ваш комментарий".</p>
-            </div>
-            <div class="col">
-                <form class="subscribe-form">
-                    <input type="text" name="email" id="email" placeholder="E-mail">
-                    <textarea name="comment" id="comment" placeholder="Ваш комментарий"></textarea>
-                    <button class="btn">Я бы попробовал!</button>
-                </form>
-            </div>
+    <div id="form" class="subscribe container grid-cols">
+        <div class="paragraph">
+            <p>Наш проект сейчас находится в разработке и, если ты хочешь стать одним из первых его пользователей, просто оставь свой e-mail и мы оповестим тебя о запуске!</p>
+            <p>А если есть вопросы и предложения то можешь смело писать их в поле "Ваш комментарий".</p>
         </div>
+        <form class="subscribe-form">
+            <input type="text" name="email" id="email" placeholder="E-mail">
+            <textarea name="comment" id="comment" placeholder="Ваш комментарий"></textarea>
+            <button class="btn">Я бы попробовал!</button>
+        </form>
     </div>
     <div class="page-footer">
         <div class="container">
-            <div class="row">
-                <div class="footer-left col">
-                    <div class="name">
-                        X-Monedy
-                    </div>
-                    <p>Текст</p>
+            <div class="footer-left">
+                <div class="name">
+                    X-Monedy
                 </div>
-                <div class="footer-social col-3">
-                    <p>Подписывайтесь</p>
-                    <div class="social-block">
-                        <div class="social"></div>
-                        <div class="social"></div>
-                    </div>
+                <p>Текст</p>
+            </div>
+            <div class="footer-social">
+                <p>Подписывайтесь</p>
+                <div class="social-block">
+                    <div class="social"></div>
+                    <div class="social"></div>
                 </div>
             </div>
         </div>
