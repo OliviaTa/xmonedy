@@ -205,6 +205,7 @@ p {
     height: 60px;
     border-radius: 2px;
     border: none;
+    font: inherit;
     font-weight: 500;
     font-size: 24px;
     line-height: 60px;
@@ -255,6 +256,7 @@ p {
     position: relative;
     list-style: none;
     width: calc((100% - 184px) / 2);
+    margin-bottom: 36px;
 }
 
 .todo-item:nth-child(odd) {
@@ -321,12 +323,17 @@ p {
 
 .todo-item p {
     line-height: 24px;
-    margin-bottom: 36px;
 }
 
 .subscribe {
     padding-top: 60px;
     padding-bottom: 60px;
+    display: flex;
+}
+
+.subscribe .paragraph {
+    margin-right: 40px;
+    flex-grow: 1;
 }
 
 .subscribe p {
@@ -414,14 +421,10 @@ p {
 }
 
 @media only screen and (max-device-width: 1000px) {
-    .page-header .main-nav,
     .page-header .header-social {
         display: none;
     }
-    body.change {
-        overflow: hidden;
-    }
-    .page-header .main-nav.change {
+    .page-header .main-nav {
         display: block;
         position: absolute;
         background: white;
@@ -431,30 +434,48 @@ p {
         left: 0;
         z-index: 1;
         padding-left: 5%;
+        transition: transform 0.3s;
+        transform: translateX(-100%);
+        opacity: 0;
     }
-    .page-header .main-nav.change {
-        padding-top: 24px;
-    }
-    .page-header .main-nav.change li {
-        margin-bottom: 24px;
-    }
-    .page-header .main-nav.change li:last-child {
-        margin-bottom: none;
-    }
-    .page-header .main-nav.change a {
+    .page-header .main-nav a {
         font-size: 26px;
         line-height: 30px;
+    }
+    .page-header .main-nav {
+        padding-top: 24px;
+    }
+    .page-header .main-nav li {
+        margin-bottom: 24px;
+    }
+    .page-header .main-nav li:last-child {
+        margin-bottom: none;
+    }
+    body.change {
+        overflow: hidden;
+    }
+    .page-header .main-nav.change {
+        transform: translateX(0);
+        opacity: 1;
     }
     .page-header .menu-icon {
         float: right;
         display: block;
         margin-left: auto;
     }
+    .intro {
+        padding-top: 60px;
+    }
     .intro .like-games {
         text-align: center;
     }
     .todo-item {
         width: calc(100% - 144px);
+        margin-bottom: 60px;
+    }
+    .todo-item:last-child {
+        margin-bottom: 0;
+        min-height: 104px;
     }
     .todo-item:nth-child(odd) {
         margin-left: 104px;
@@ -469,9 +490,18 @@ p {
     .todo-item:nth-child(even)::before {
         left: -104px;
     }
+    .todo-item::after {
+        height: calc(100% + 60px);
+    }
     .todo-item:nth-child(even)::after {
         left: -52px;
         width: 0;
+    }
+    .subscribe {
+        flex-direction: column;
+    }
+    .subscribe .paragraph {
+        margin-right: 0;
     }
     .subscribe-form {
         padding-top: 50px;
@@ -484,6 +514,9 @@ p {
 }
 
 @media only screen and (max-device-width: 500px) {
+    .try-promo p {
+        font-size: 26px;
+    }
     .btn {
         width: 100%;
     }
@@ -503,21 +536,36 @@ p {
     .page-footer .social {
         margin-right: 20px;
     }
+    .page-footer .social:last-of-type {
+        margin-right: 0;
+    }
 }
 
 @media only screen and (max-device-width: 400px) {
+    .name-logo {
+        margin-right: 20px;
+    }
     .todo-item {
         margin-left: 0 !important;
         padding-top: 104px;
+        margin-bottom: 80px;
         padding-left: 0 !important;
         text-align: center !important;
         width: 100%;
+    }
+    .todo-item:last-of-type {
+        margin-bottom: 0;
     }
     .todo-item:before {
         left: calc(50% - 52px) !important;
         top: 0 !important;
     }
     .todo-item::after {
-        display: none;
+        width: 60% !important;
+        height: 0 !important;
+        bottom: -40px !important;
+        left: 20% !important;
+        top: unset !important;
+        border-color: #d0d0d0;
     }
 }
