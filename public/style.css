@@ -562,10 +562,11 @@ p {
     }
     .todo-item::after {
         width: 60% !important;
-        height: 0 !important;
+        height: 1px !important;
         bottom: -40px !important;
         left: 20% !important;
         top: unset !important;
-        border-color: #d0d0d0;
+        background-color: #d0d0d0;
+        border: none;
     }
 }
