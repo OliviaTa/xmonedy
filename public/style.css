@@ -48,21 +48,12 @@ p {
     margin-top: 30px;
     margin-bottom: 30px;
     display: flex;
+    align-items: center;
 }
 
-.img-logo {
-    display: inline-block;
-    width: 40px;
+.logo {
+    width: 156px;
     height: 30px;
-    background-color: #E62117;
-    border-radius: 8px;
-    margin-right: 10px;
-}
-
-.name-logo {
-    display: inline-block;
-    font-size: 24px;
-    font-weight: 500;
     margin-right: 126px;
 }
 
@@ -133,13 +124,23 @@ p {
 .social {
     width: 30px;
     height: 30px;
-    background-color: #FF0000;
     border-radius: 4px;
     margin-right: 10px;
+    background-position: center;
+    background-size: contain;
 }
 
 .social:last-of-type {
     margin-right: 0;
+}
+
+.social.vk {
+    background-image: url("assets/icons/VK.svg");
+    border-radius: 50%;
+}
+
+.social.inst {
+    background-image: url("assets/icons/Instagram.svg");
 }
 
 .video img {
@@ -421,6 +422,9 @@ p {
 }
 
 @media only screen and (max-device-width: 1000px) {
+    .page-header .logo {
+        margin-right: 20px;
+    }
     .page-header .header-social {
         display: none;
     }
@@ -459,7 +463,6 @@ p {
         opacity: 1;
     }
     .page-header .menu-icon {
-        float: right;
         display: block;
         margin-left: auto;
     }
@@ -542,9 +545,6 @@ p {
 }
 
 @media only screen and (max-device-width: 400px) {
-    .name-logo {
-        margin-right: 20px;
-    }
     .todo-item {
         margin-left: 0 !important;
         padding-top: 104px;
