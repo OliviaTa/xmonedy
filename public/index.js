@@ -2,9 +2,10 @@
 let menuIcon = document.querySelector('.page-header .menu-icon');
 let mainNav = document.querySelector('.page-header .main-nav');
 let body = document.querySelector('body');
-let mainNavElements = document.querySelectorAll('.page-header .main-nav li')
+let mainNavElements = document.querySelectorAll('.page-header .main-nav a')
 
 menuIcon.onclick = function() {
+    mainNav.classList.remove('opacity');
     menuIcon.classList.toggle('change');
     mainNav.classList.toggle('change');
     body.classList.toggle('change');
@@ -16,6 +17,7 @@ for (let element of mainNavElements) {
             menuIcon.classList.remove('change');
             mainNav.classList.remove('change');
             body.classList.remove('change');
+            mainNav.classList.add('opacity');
         }
     }
 }

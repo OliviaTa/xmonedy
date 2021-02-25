@@ -32,6 +32,10 @@ body {
     }
 }
 
+.opacity {
+    opacity: 0;
+}
+
 h2 {
     font-size: 32px;
     font-weight: 500;
@@ -180,9 +184,11 @@ p {
     content: "";
     position: absolute;
     left: -30px;
+    top: calc(50% - 10px);
     width: 20px;
     height: 20px;
     background-image: url(assets/icons/mark.svg);
+    border-radius: 50%;
 }
 
 .try-promo {
@@ -440,7 +446,6 @@ p {
         padding-left: 5%;
         transition: transform 0.3s;
         transform: translateX(-100%);
-        opacity: 0;
     }
     .page-header .main-nav a {
         font-size: 26px;
@@ -460,14 +465,13 @@ p {
     }
     .page-header .main-nav.change {
         transform: translateX(0);
-        opacity: 1;
     }
     .page-header .menu-icon {
         display: block;
         margin-left: auto;
     }
     .intro {
-        padding-top: 60px;
+        padding-top: 30px;
     }
     .intro .like-games {
         text-align: center;
