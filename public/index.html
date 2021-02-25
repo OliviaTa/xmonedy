@@ -2,6 +2,15 @@
 <html lang="ru">
 
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>X-Monedy</title>
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function(m, e, t, r, i, k, a) {
@@ -22,15 +31,6 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/72874123" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>X-Monedy</title>
-    <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
     <div class="page-header container">
         <div class="logo">
             <img src="assets/img/logo.svg" alt="X-Monedy">
@@ -77,7 +77,7 @@
     <div class="try-promo container">
         <p>Что, если мы скажем тебе, что от тебя нужно будет <strong>только играть</strong> и записывать игровой процесс на видео?
             <br><strong>Остальное мы берем на себя!</strong></p>
-        <a class="btn" href="#form">Я бы попробовал!</a>
+        <a class="btn" href="#form" onclick="upperButton()">Я бы попробовал!</a>
     </div>
     <div class="todo" id="todo">
         <div class="container">
@@ -121,7 +121,7 @@
         <form class="subscribe-form">
             <input type="text" name="email" id="email" placeholder="E-mail">
             <textarea name="comment" id="comment" placeholder="Ваш комментарий"></textarea>
-            <button class="btn">Я бы попробовал!</button>
+            <button class="btn" onclick="lowerButton()">Я бы попробовал!</button>
         </form>
     </div>
     <div class="page-footer">
