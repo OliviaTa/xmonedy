@@ -3,11 +3,10 @@
     "version": "1.0.0",
     "description": "",
     "main": "app.js",
-    "dependencies": {
+    "devDependencies": {
         "express": "4.17.1",
         "firebase-tools": "9.5.0"
     },
-    "devDependencies": {},
     "scripts": {
         "start": "nodemon app.js"
     },
