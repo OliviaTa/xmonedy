@@ -3,24 +3,37 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    >
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
     <title>X-Monedy</title>
-    <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="shortcut icon"
+        href="assets/icons/favicon.ico"
+        type="image/x-icon"
+    >
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 </head>
 
 <body>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
-        (function(m, e, t, r, i, k, a) {
-            m[i] = m[i] || function() {
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
                 (m[i].a = m[i].a || []).push(arguments)
             };
             m[i].l = 1 * new Date();
             k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
         })
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
         ym(72874123, "init", {
             clickmap: true,
@@ -29,11 +42,57 @@
             webvisor: true
         });
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/72874123" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript>
+        <div><img
+                src="https://mc.yandex.ru/watch/72874123"
+                style="position:absolute; left:-9999px;"
+                alt=""
+            /></div>
+    </noscript>
     <!-- /Yandex.Metrika counter -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAX5tSjxzvjI5RlB6weQ52u9dbudYNn2oI",
+            authDomain: "x-monedy-991a7.firebaseapp.com",
+            databaseURL: "https://x-monedy-991a7-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "x-monedy-991a7",
+            storageBucket: "x-monedy-991a7.appspot.com",
+            messagingSenderId: "948151740026",
+            appId: "1:948151740026:web:e9021e333724445504bdc3",
+            measurementId: "G-T888D44M3D"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        var addUser = firebase.functions().httpsCallable('addUser');
+
+        // addUser({ email: 'dsad@dfsf.sdfs', comment: 'fdsfsf' }).then();
+
+        const starCountRef = firebase.database().ref('counter');
+        starCountRef.on('value', (snapshot) => {
+            if (snapshot.exists()) {
+                const data = snapshot.val();
+                console.log(data);
+            }
+        });
+    </script>
     <div class="page-header container">
         <div class="logo">
-            <img src="assets/img/logo.svg" alt="X-Monedy">
+            <img
+                src="assets/img/logo.svg"
+                alt="X-Monedy"
+            >
         </div>
         <div class="menu-icon">
             <div class="icon-item"></div>
@@ -52,13 +111,22 @@
         </div>
     </div>
     <div class="video">
-        <img src="assets/img/Video.jpg" alt="Counter Strike: Global Offensive" width="100%">
+        <img
+            src="assets/img/Video.jpg"
+            alt="Counter Strike: Global Offensive"
+            width="100%"
+        >
     </div>
-    <div class="intro" id="intro">
+    <div
+        class="intro"
+        id="intro"
+    >
         <div class="container grid-cols">
             <div class="like-games">
                 <h2>Любишь играть?</h2>
-                <p>Если ты зашел на эту страницу, значит у тебя есть интерес к видеоиграм.<br>Скорее всего, ты проводишь много времени играя и был бы не против получать от этого какой-то доход. Думаем, ты знаешь, что есть отличный способ <strong>заработать</strong>                    на этом хобби - монетизация видео на YouTube.
+                <p>Если ты зашел на эту страницу, значит у тебя есть интерес к видеоиграм.<br>Скорее всего, ты проводишь
+                    много времени играя и был бы не против получать от этого какой-то доход. Думаем, ты знаешь, что есть
+                    отличный способ <strong>заработать</strong> на этом хобби - монетизация видео на YouTube.
                 </p>
             </div>
             <div class="problem">
@@ -75,11 +143,20 @@
         </div>
     </div>
     <div class="try-promo container">
-        <p>Что, если мы скажем тебе, что от тебя нужно будет <strong>только играть</strong> и записывать игровой процесс на видео?
-            <br><strong>Остальное мы берем на себя!</strong></p>
-        <a class="btn" href="#form" onclick="upperButton()">Я бы попробовал!</a>
+        <p>Что, если мы скажем тебе, что от тебя нужно будет <strong>только играть</strong> и записывать игровой процесс
+            на видео?
+            <br><strong>Остальное мы берем на себя!</strong>
+        </p>
+        <a
+            class="btn"
+            href="#form"
+            onclick="upperButton()"
+        >Я бы попробовал!</a>
     </div>
-    <div class="todo" id="todo">
+    <div
+        class="todo"
+        id="todo"
+    >
         <div class="container">
             <div class="todo-header">
                 <h2>Как получить деньги начиная с <strong>первого</strong> видео на YouTube?</h2>
@@ -89,21 +166,27 @@
                 <ol>
                     <li class="todo-item">
                         <h3>Запиши видео</h3>
-                        <p><strong>Просто</strong> сделай запись как ты играешь, придумай название для своего видео и краткое описание. Все!</p>
+                        <p><strong>Просто</strong> сделай запись как ты играешь, придумай название для своего видео и
+                            краткое описание. Все!</p>
                     </li>
                     <li class="todo-item">
                         <h3>Зарегистрируйся и Добавь свое видео</h3>
-                        <p>Твое видео сразу добавится на раскрученный игровой канал. Ты сможешь получать деньги сразу за фактические просмотры по <strong>правилам YouTube</strong>, а не ждать, когда раскрутится твой канал.
+                        <p>Твое видео сразу добавится на раскрученный игровой канал. Ты сможешь получать деньги сразу за
+                            фактические просмотры по <strong>правилам YouTube</strong>, а не ждать, когда раскрутится
+                            твой канал.
                         </p>
                     </li>
                     <li class="todo-item">
                         <h3>Услуга по монтажу</h3>
-                        <p>Так же ты можешь <strong>не заморачиваться</strong> с монтажом, картинками и пр. Достаточно воспользоваться нашей услугой по монтажу видео! Все просто!</p>
+                        <p>Так же ты можешь <strong>не заморачиваться</strong> с монтажом, картинками и пр. Достаточно
+                            воспользоваться нашей услугой по монтажу видео! Все просто!</p>
                     </li>
                     <li class="todo-item">
                         <h3>Получай доход за просмотры</h3>
                         <p>Так как канал уже раскручен, ты сразу имеешь просмотры и подписчиков, а значит и
-                            <strong>доход</strong>, но не забывай, что многое зависит от того, во что ты играешь и насколько ты агрессивно разносишь своих врагов! Зритель любит Экшн!</p>
+                            <strong>доход</strong>, но не забывай, что многое зависит от того, во что ты играешь и
+                            насколько ты агрессивно разносишь своих врагов! Зритель любит Экшн!
+                        </p>
                     </li>
                     <li class="todo-item">
                         <h3>Выводи деньги и играй дальше!</h3>
@@ -113,15 +196,31 @@
             </div>
         </div>
     </div>
-    <div id="form" class="subscribe container">
+    <div
+        id="form"
+        class="subscribe container"
+    >
         <div class="paragraph">
-            <p>Наш проект сейчас находится в разработке и, если ты хочешь стать одним из первых его пользователей, просто оставь свой e-mail и мы оповестим тебя о запуске!</p>
+            <p>Наш проект сейчас находится в разработке и, если ты хочешь стать одним из первых его пользователей,
+                просто оставь свой e-mail и мы оповестим тебя о запуске!</p>
             <p>А если есть вопросы и предложения то можешь смело писать их в поле "Ваш комментарий".</p>
         </div>
         <form class="subscribe-form">
-            <input type="text" name="email" id="email" placeholder="E-mail">
-            <textarea name="comment" id="comment" placeholder="Ваш комментарий"></textarea>
-            <button class="btn" onclick="lowerButton()">Я бы попробовал!</button>
+            <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+            >
+            <textarea
+                name="comment"
+                id="comment"
+                placeholder="Ваш комментарий"
+            ></textarea>
+            <button
+                class="btn"
+                onclick="lowerButton()"
+            >Я бы попробовал!</button>
         </form>
     </div>
     <div class="page-footer">

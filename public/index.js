@@ -4,7 +4,7 @@ let mainNav = document.querySelector('.page-header .main-nav');
 let body = document.querySelector('body');
 let mainNavElements = document.querySelectorAll('.page-header .main-nav a')
 
-menuIcon.onclick = function() {
+menuIcon.onclick = function () {
     mainNav.classList.remove('opacity');
     menuIcon.classList.toggle('change');
     mainNav.classList.toggle('change');
@@ -12,7 +12,7 @@ menuIcon.onclick = function() {
 }
 
 for (let element of mainNavElements) {
-    element.onclick = function() {
+    element.onclick = function () {
         if (mainNav.classList.contains('change')) {
             menuIcon.classList.remove('change');
             mainNav.classList.remove('change');
