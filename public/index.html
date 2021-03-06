@@ -205,22 +205,10 @@
                 просто оставь свой e-mail и мы оповестим тебя о запуске!</p>
             <p>А если есть вопросы и предложения то можешь смело писать их в поле "Ваш комментарий".</p>
         </div>
-        <form class="subscribe-form">
-            <input
-                type="text"
-                name="email"
-                id="email"
-                placeholder="E-mail"
-            >
-            <textarea
-                name="comment"
-                id="comment"
-                placeholder="Ваш комментарий"
-            ></textarea>
-            <button
-                class="btn"
-                onclick="lowerButton()"
-            >Я бы попробовал!</button>
+        <form class="subscribe-form" onsubmit="formOnsubmit(event);">
+            <input type="email" name="email" id="email" placeholder="E-mail" required>
+            <textarea name="comment" id="comment" placeholder="Ваш комментарий"></textarea>
+            <button class="btn" onclick="lowerButton()">Я бы попробовал!</button>
         </form>
     </div>
     <div class="page-footer">
@@ -240,6 +228,11 @@
             </div>
         </div>
     </div>
+
+    <!--***FIREBASE***-->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+
     <script src="index.js"></script>
 </body>
 
