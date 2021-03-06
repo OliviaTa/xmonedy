@@ -51,42 +51,6 @@
     </noscript>
     <!-- /Yandex.Metrika counter -->
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
-
-    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-functions.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
-
-    <script>
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        var firebaseConfig = {
-            apiKey: "AIzaSyAX5tSjxzvjI5RlB6weQ52u9dbudYNn2oI",
-            authDomain: "x-monedy-991a7.firebaseapp.com",
-            databaseURL: "https://x-monedy-991a7-default-rtdb.europe-west1.firebasedatabase.app",
-            projectId: "x-monedy-991a7",
-            storageBucket: "x-monedy-991a7.appspot.com",
-            messagingSenderId: "948151740026",
-            appId: "1:948151740026:web:e9021e333724445504bdc3",
-            measurementId: "G-T888D44M3D"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-
-        var addUser = firebase.functions().httpsCallable('addUser');
-
-        // addUser({ email: 'dsad@dfsf.sdfs', comment: 'fdsfsf' }).then();
-
-        const starCountRef = firebase.database().ref('counter');
-        starCountRef.on('value', (snapshot) => {
-            if (snapshot.exists()) {
-                const data = snapshot.val();
-                console.log(data);
-            }
-        });
-    </script>
     <div class="page-header container">
         <div class="logo">
             <img
@@ -205,10 +169,39 @@
                 просто оставь свой e-mail и мы оповестим тебя о запуске!</p>
             <p>А если есть вопросы и предложения то можешь смело писать их в поле "Ваш комментарий".</p>
         </div>
-        <form class="subscribe-form" onsubmit="formOnsubmit(event);">
-            <input type="email" name="email" id="email" placeholder="E-mail" required>
-            <textarea name="comment" id="comment" placeholder="Ваш комментарий"></textarea>
-            <button class="btn" onclick="lowerButton()">Я бы попробовал!</button>
+        <form
+            class="form subscribe-form"
+            onsubmit="formOnsubmit(event);"
+        >
+            <input
+                id="email"
+                class="form__control"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                required
+            >
+            
+            <textarea
+                id="comment"
+                class="form__control"
+                name="comment"
+                placeholder="Ваш комментарий"
+            ></textarea>
+
+            <label class="form__control">
+                <input
+                    id="subscribe"
+                    type="checkbox"
+                    name="subscribe"
+                    checked
+                >
+                Хочу получить оповещение о релизе
+            </label>
+            <button
+                class="btn"
+                onclick="lowerButton()"
+            >Я бы попробовал!</button>
         </form>
     </div>
     <div class="page-footer">
@@ -231,9 +224,12 @@
 
     <!--***FIREBASE***-->
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-functions.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
 
     <script src="index.js"></script>
+    <script src="form.js"></script>
 </body>
 
 </html>
