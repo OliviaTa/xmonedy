@@ -139,7 +139,7 @@ p {
 }
 
 .social.vk {
-  background-image: url("assets/icons/VK.svg");
+  background-image: url("assets/icons/vk.svg");
   border-radius: 50%;
 }
 
@@ -224,6 +224,7 @@ p {
 
 .btn:hover,
 .btn:focus {
+  cursor: pointer;
   color: #d9d9d9;
   border: none;
   box-shadow: none;
