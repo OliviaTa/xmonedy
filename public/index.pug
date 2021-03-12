@@ -1,0 +1,181 @@
+doctype html
+html(lang="ru")
+    head
+        // META START
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="description" content="Заработок с помощью компьютерных игр на YouTube")
+        meta(name="author" content="Aleksey Zikratskiy")
+
+        // Open Graph Start
+        meta(property="og:locale" content="ru_RU")
+        meta(property="og:title" content="Реально ли зарабатывать на компьютерных играх?")
+        meta(property="og:description" content="Ты наверняка много играешь? А можешь продолжать играть и зарабатывать на этом деньги! От тебя требуется только играть и снимать видео!")
+        meta(property="og:url" content="https://x-monedy.com/")
+        meta(property="og:image" content="https://x-monedy.com/assets/img/Video.jpg")
+        meta(property="og:site_name" content="x-monedy")
+
+        // Open Graph End
+        meta(name="msapplication-TileColor" content="#da532c")
+        meta(name="msapplication-config" content="/assets/favicon/browserconfig.xml")
+        meta(name="theme-color" content="#ffffff")
+
+        script(type='application/ld+json')
+            |{
+            |   "@context": "http://www.schema.org",
+            |   "@type": "WebSite",
+            |   "name": "X-Monedy",
+            |   "alternateName": "x-monedy",
+            |   "url": "https://x-monedy.com/",
+            |   "description": "Заработок с помощью компьютерных игр на YouTube",
+            |   "logo": "https://x-monedy.com/assets/img/logo.svg",
+            |   "image": "https://x-monedy.com/assets/img/logo.svg"
+            |}
+
+        // META END
+
+        link(rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/favicon/150x150.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="assets/favicon/16x16.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="assets/favicon/32x32.png")
+        link(rel="manifest" href="assets/favicon/site.webmanifest")
+        link(rel="shortcut icon" href="assets/favicon/favicon.ico")
+
+        title X-Monedy - зарабатывай просто играя в игры!
+        link(rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon")
+        style
+            include ./style.css
+
+    body
+        // Yandex.Metrika counter
+        script(type="text/javascript")
+            |(function (m, e, t, r, i, k, a) {
+            |   m[i] = m[i] || function () {
+            |       (m[i].a = m[i].a || []).push(arguments)
+            |   };
+            |   m[i].l = 1 * new Date();
+            |   k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+            |})
+            |(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            |
+            |ym(72874123, "init", {
+            |   clickmap: true,
+            |   trackLinks: true,
+            |   accurateTrackBounce: true,
+            |   webvisor: true
+            |});
+        noscript
+            div
+                img(src="https://mc.yandex.ru/watch/72874123" style="position:absolute; left:-9999px;" alt="")
+        // Yandex.Metrika counter
+
+        div.page-header.container
+            div.logo
+                img(src="assets/img/logo.svg" alt="X-Monedy")
+            div.menu-icon
+                div.icon-item
+                div.icon-item
+                div.icon-item
+            ul.main-nav
+                li
+                    a(href="#intro") Проблема
+                li
+                    a(href="#todo") Решение
+            div.header-social
+                div.social-block
+                    div.social.vk
+                    div.social.inst
+
+        div.video
+            img(src="/assets/img/Video.jpg" alt="Counter Strike: Global Offensive" width="100%")
+
+        div.intro#intro
+            div.container.grid-cols
+                div.like-games
+                    h2 Любишь играть?
+                    p
+                        |Если ты зашел на эту страницу, значит у тебя есть интерес к видеоиграм. Скорее всего, ты проводишь
+                        |много времени играя и был бы не против получать от этого какой-то доход. Думаем, ты знаешь, что есть
+                        |отличный способ <strong>заработать</strong> на этом хобби - монетизация видео на YouTube.
+                div.problem
+                    h2 Но есть проблемы?
+                    ul.problems-list
+                        li Есть канал на YouTube, но не можешь его раскрутить и дойти до монетизации?
+                        li Слишком мало получаешь?
+                        li Нет просмотров?
+                        li Никто не подписывается?
+                        li Не хочешь тратить много времени на монтаж?
+                        li Не получается соблюдать график публикации?
+
+        div.try-promo.container
+            p Что, если мы скажем тебе, что от тебя нужно будет <strong>только играть</strong> и записывать игровой процесс на видео?<br><strong>Остальное мы берем на себя!</strong>
+            a.btn(href="#form" onclick="upperButton()") Хочу попробовать!
+
+        div.todo#todo
+            div.container
+                div.todo-header
+                    h2 Как получить деньги начиная с <strong>первого</strong> видео на YouTube?
+                    p Упрощенный пример процесса
+                div.todo-list
+                    ol
+                        li.todo-item
+                            h3 Запиши видео
+                            p
+                                |<strong>Просто</strong> сделай запись как ты играешь, придумай название для своего видео и краткое описание. Все!
+                        li.todo-item
+                            h3 Зарегистрируйся и Добавь свое видео
+                            p
+                                |Твое видео сразу добавится на раскрученный игровой канал. Ты сможешь получать деньги сразу за
+                                |фактические просмотры по <strong>правилам YouTube</strong>, а не ждать, когда раскрутится
+                                |твой канал.
+                        li.todo-item
+                            h3 Услуга по монтажу
+                            p
+                                |Так же ты можешь <strong>не заморачиваться</strong> с монтажом, картинками и пр. Достаточно
+                                |воспользоваться нашей услугой по монтажу видео! Все просто!
+                        li.todo-item
+                            h3 Получай доход за просмотры
+                            p
+                                |Так как канал уже раскручен, ты сразу имеешь просмотры и подписчиков, а значит и
+                                |<strong>доход</strong>, но не забывай, что многое зависит от того, во что ты играешь и
+                                |насколько ты агрессивно разносишь своих врагов! Зритель любит Экшн!
+                        li.todo-item
+                            h3 Выводи деньги и играй дальше!
+                            p
+                                |Это <strong>все</strong> что от тебя требуется!
+
+        div.subscribe.container#form
+            div.paragraph
+                p
+                    |Наш проект сейчас находится в разработке и, если ты хочешь стать одним из первых его пользователей,
+                    |просто оставь свой e-mail и мы оповестим тебя о запуске!
+                p
+                    |А если есть вопросы и предложения то можешь смело писать их в поле "Ваш комментарий".
+            form.form.subscribe-form(onsubmit="formOnsubmit(event);")
+                input.form__control#email(type="email" name="email" placeholder="E-mail" required)
+                textarea.form__control#comment(name="comment" placeholder="Ваш комментарий")
+                input#subscribe(type="checkbox" name="subscribe" checked)
+                label.form__control(for="subscribe") Хочу получить оповещение о релизе
+                button.btn(onclick="lowerButton()") Хочу попробовать!
+
+        div.page-footer
+            div.container
+                div.footer-left
+                    div.name X-Monedy
+                    p Текст
+                div.footer-social
+                    p Подписывайтесь
+                    div.social-block
+                        div.social.vk
+                        div.social.inst
+
+        // FIREBASE
+        script(src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js")
+        script(src="https://www.gstatic.com/firebasejs/8.2.9/firebase-functions.js")
+        script(src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js")
+        script(src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js")
+
+        script
+            include ./index.js
+        script
+            include ./form.js
