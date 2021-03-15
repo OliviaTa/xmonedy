@@ -41,6 +41,10 @@ html(lang="ru")
         link(rel="manifest" href="assets/favicon/site.webmanifest")
         link(rel="shortcut icon" href="assets/favicon/favicon.ico")
 
+        // FONTS
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet")
+
         title X-Monedy - зарабатывай просто играя в игры!
         link(rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon")
         style
@@ -69,105 +73,116 @@ html(lang="ru")
                 img(src="https://mc.yandex.ru/watch/72874123" style="position:absolute; left:-9999px;" alt="")
         // Yandex.Metrika counter
 
-        div.page-header.container
-            div.logo
-                img(src="assets/img/logo.svg" alt="X-Monedy")
-            div.menu-icon
-                div.icon-item
-                div.icon-item
-                div.icon-item
-            ul.main-nav
-                li
-                    a(href="#intro") Проблема
-                li
-                    a(href="#todo") Решение
-            div.header-social
-                div.social-block
-                    div.social.vk
-                    div.social.inst
+        section.top.container
+            header.header
+                div.logo
+                    img(src="assets/img/logo.svg" alt="X-Monedy")
+                ul.header__main-nav
+                    li
+                        a(href="#intro") Проблема
+                    li
+                        a(href="#todo") Решение
+                div.header__social
+                    div.header__social-block
+                        div.header__social-vk
+                        div.header__social-inst
+            div.top__content
+                h1.top__heading Играй, Записывай, Зарабатывай!
+                ul.top__actions
+                    li.top__action Играй в любимую игру
+                    li.top__action Записывай интересные видео
+                    li.top__action Зарабатывай и выводи деньги
+                a.btn(href="#form") 
+                    span ХОЧУ ПОПРОБОВАТЬ!
 
-        div.video
-            img(src="/assets/img/Video.jpg" alt="Counter Strike: Global Offensive" width="100%")
+        section.intro.container#intro
+            div.intro__block
+                h2.heading.like-games__heading-margin Любишь <span class="bold">играть</span>?
+                p.intro__text
+                    |Если ты зашел на эту страницу, значит у тебя есть интерес к видеоиграм.<br>
+                    |Скорее всего, ты проводишь много времени играя и был бы не против получать от 
+                    |этого какой-то доход.<br>Думаем, ты знаешь, что есть отличный способ 
+                    |<span class="bold">заработать</span> на этом хобби - монетизация видео или 
+                    |реклама на YouTube.
+            div.intro__block
+                h2.heading.problem__heading Но есть <span class="bold">проблемы</span>?
+                ul.problems-list
+                    li Есть канал на YouTube, но не можешь его раскрутить и дойти до монетизации?
+                    li Слишком мало получаешь с канала?
+                    li Нет просмотров на канале?
+                    li Никто не подписывается на канал?
+                    li Не хочешь тратить много времени на монтаж?
+                    li Не получается соблюдать график публикации?
+                    li И так далее...
 
-        div.intro#intro
-            div.container.grid-cols
-                div.like-games
-                    h2 Любишь играть?
-                    p
-                        |Если ты зашел на эту страницу, значит у тебя есть интерес к видеоиграм. Скорее всего, ты проводишь
-                        |много времени играя и был бы не против получать от этого какой-то доход. Думаем, ты знаешь, что есть
-                        |отличный способ <strong>заработать</strong> на этом хобби - монетизация видео на YouTube.
-                div.problem
-                    h2 Но есть проблемы?
-                    ul.problems-list
-                        li Есть канал на YouTube, но не можешь его раскрутить и дойти до монетизации?
-                        li Слишком мало получаешь?
-                        li Нет просмотров?
-                        li Никто не подписывается?
-                        li Не хочешь тратить много времени на монтаж?
-                        li Не получается соблюдать график публикации?
+        section.try-promo.container
+            p.try-promo__text
+                |<span class="bold">НО</span> что, если мы скажем, что от тебя нужно будет 
+                |<span class="bold">только играть</span> и записывать игровой процесс на видео? 
+                |<span class="bold">Остальное мы берем на себя!</span>
+            a.btn(href="#form" onclick="upperButton()") Я ГОТОВ!
 
-        div.try-promo.container
-            p Что, если мы скажем тебе, что от тебя нужно будет <strong>только играть</strong> и записывать игровой процесс на видео?<br><strong>Остальное мы берем на себя!</strong>
-            a.btn(href="#form" onclick="upperButton()") Хочу попробовать!
+        section.todo#todo
+            h2.todo__heading.container Как получить деньги начиная с <span class="bold">первого</span> видео на YouTube?
+            ol.todo__list
+                li.todo-item
+                    h3.todo-item__heading.container Запиши видео
+                    p.todo-item__text.container
+                        |<span class="bold">Просто</span> сделай запись как ты играешь, придумай название для своего видео и краткое описание. Все!
+                li.todo-item
+                    h3.todo-item__heading.container Зарегистрируйся и Добавь свое видео
+                    p.todo-item__text.container
+                        |Твое видео сразу добавится на раскрученный игровой канал. Ты сможешь получать деньги сразу за
+                        |фактические просмотры по <span class="bold">правилам YouTube</span>, а не ждать, когда раскрутится
+                        |твой канал.
+                li.todo-item
+                    h3.todo-item__heading.container Услуга по монтажу
+                    p.todo-item__text.container
+                        |Так же ты можешь <span class="bold">не заморачиваться</span> с монтажом, картинками и пр. Достаточно
+                        |воспользоваться нашей услугой по монтажу видео! Все просто!
+                li.todo-item
+                    h3.todo-item__heading.container Получай доход за просмотры
+                    p.todo-item__text.container
+                        |Так как канал уже раскручен, ты сразу имеешь просмотры и подписчиков, а значит и
+                        |<span class="bold">доход</span>, но не забывай, что многое зависит от того, во что ты играешь и
+                        |насколько ты агрессивно разносишь своих врагов! Зритель любит Экшн!
+                li.todo-item
+                    h3.todo-item__heading.container Выводи деньги и играй дальше!
+                    p.todo-item__text.container
+                        |Это <span class="bold">все</span> что от тебя требуется!
 
-        div.todo#todo
-            div.container
-                div.todo-header
-                    h2 Как получить деньги начиная с <strong>первого</strong> видео на YouTube?
-                    p Упрощенный пример процесса
-                div.todo-list
-                    ol
-                        li.todo-item
-                            h3 Запиши видео
-                            p
-                                |<strong>Просто</strong> сделай запись как ты играешь, придумай название для своего видео и краткое описание. Все!
-                        li.todo-item
-                            h3 Зарегистрируйся и Добавь свое видео
-                            p
-                                |Твое видео сразу добавится на раскрученный игровой канал. Ты сможешь получать деньги сразу за
-                                |фактические просмотры по <strong>правилам YouTube</strong>, а не ждать, когда раскрутится
-                                |твой канал.
-                        li.todo-item
-                            h3 Услуга по монтажу
-                            p
-                                |Так же ты можешь <strong>не заморачиваться</strong> с монтажом, картинками и пр. Достаточно
-                                |воспользоваться нашей услугой по монтажу видео! Все просто!
-                        li.todo-item
-                            h3 Получай доход за просмотры
-                            p
-                                |Так как канал уже раскручен, ты сразу имеешь просмотры и подписчиков, а значит и
-                                |<strong>доход</strong>, но не забывай, что многое зависит от того, во что ты играешь и
-                                |насколько ты агрессивно разносишь своих врагов! Зритель любит Экшн!
-                        li.todo-item
-                            h3 Выводи деньги и играй дальше!
-                            p
-                                |Это <strong>все</strong> что от тебя требуется!
+        section.alpha.container
+            p.alpha__text
+                |Успевай стать альфа тестером нашего сервиса и после релиза мы обязательно о тебе 
+                |вспомним и отблагодарим! Будут <span class="bold">подарки</span> всем первым участникам!
+            a.btn(href="#form") ХОЧУ!
 
-        div.subscribe.container#form
+        section.subscribe.container#form
             div.paragraph
                 p
                     |Наш проект сейчас находится в разработке и, если ты хочешь стать одним из первых его пользователей,
                     |просто оставь свой e-mail и мы оповестим тебя о запуске!
                 p
-                    |А если есть вопросы и предложения то можешь смело писать их в поле "Ваш комментарий".
+                    |А если есть вопросы или предложения по проекту, то можешь смело писать их в поле "Ваш комментарий". 
+                    |Мы будем рады любой обратной связи! Спасибо!
             form.form.subscribe-form(onsubmit="formOnsubmit(event);")
                 input.form__control#email(type="email" name="email" placeholder="E-mail" required)
                 textarea.form__control#comment(name="comment" placeholder="Ваш комментарий")
-                input#subscribe(type="checkbox" name="subscribe" checked)
-                label.form__control(for="subscribe") Хочу получить оповещение о релизе
-                button.btn(onclick="lowerButton()") Хочу попробовать!
+                input.form__custom-checkbox#subscribe(type="checkbox" name="subscribe" checked)
+                label.subscribe__label.form__control(for="subscribe") Хочу получить уведомление о релизе
+                button.btn(onclick="lowerButton()") БУДУ ЖДАТЬ!
 
-        div.page-footer
-            div.container
-                div.footer-left
-                    div.name X-Monedy
-                    p Текст
-                div.footer-social
-                    p Подписывайтесь
-                    div.social-block
-                        div.social.vk
-                        div.social.inst
+        footer.page-footer.container
+            div.footer-social
+                p Подписывайтесь
+                div.social-block
+                    div.social.vk
+                    div.social.inst
+            div.footer-logo
+                div.logo
+                    img(src="assets/img/logo.svg" alt="X-Monedy")
+                p.footer-logo__text Играем и зарабатываем
+
 
         // FIREBASE
         script(src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js")
