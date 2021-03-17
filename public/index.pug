@@ -79,13 +79,13 @@ html(lang="ru")
                     img(src="assets/img/logo.svg" alt="X-Monedy")
                 ul.header__main-nav
                     li
-                        a(href="#intro") Проблема
+                        a(href="#intro") Для кого?
                     li
-                        a(href="#todo") Решение
-                div.header__social
-                    div.header__social-block
-                        div.header__social-vk
-                        div.header__social-inst
+                        a(href="#todo") Как начать?
+                div.header-social
+                    div.social-block
+                        div.social.vk
+                        div.social.inst
             div.top__content
                 h1.top__heading Играй, Записывай, Зарабатывай!
                 ul.top__actions
@@ -116,46 +116,48 @@ html(lang="ru")
                     li И так далее...
 
         section.try-promo.container
-            p.try-promo__text
-                |<span class="bold">НО</span> что, если мы скажем, что от тебя нужно будет 
-                |<span class="bold">только играть</span> и записывать игровой процесс на видео? 
-                |<span class="bold">Остальное мы берем на себя!</span>
-            a.btn(href="#form" onclick="upperButton()") Я ГОТОВ!
+            div.try-promo__block
+                p.try-promo__text
+                    |<span class="bold">НО</span> что, если мы скажем, что от тебя нужно будет 
+                    |<span class="bold">только играть</span> и записывать игровой процесс на видео?<br>
+                    |<span class="bold">Остальное мы берем на себя!</span>
+                a.btn(href="#form" onclick="upperButton()") Я ГОТОВ!
 
-        section.todo#todo
-            h2.todo__heading.container Как получить деньги начиная с <span class="bold">первого</span> видео на YouTube?
+        section.todo.container#todo
+            h2.todo__heading Как получить деньги начиная с <span class="bold">первого</span> видео на YouTube?
             ol.todo__list
                 li.todo-item
-                    h3.todo-item__heading.container Запиши видео
-                    p.todo-item__text.container
+                    h3.todo-item__heading Запиши видео
+                    p.todo-item__text
                         |<span class="bold">Просто</span> сделай запись как ты играешь, придумай название для своего видео и краткое описание. Все!
                 li.todo-item
-                    h3.todo-item__heading.container Зарегистрируйся и Добавь свое видео
-                    p.todo-item__text.container
+                    h3.todo-item__heading Зарегистрируйся и Добавь свое видео
+                    p.todo-item__text
                         |Твое видео сразу добавится на раскрученный игровой канал. Ты сможешь получать деньги сразу за
                         |фактические просмотры по <span class="bold">правилам YouTube</span>, а не ждать, когда раскрутится
                         |твой канал.
                 li.todo-item
-                    h3.todo-item__heading.container Услуга по монтажу
-                    p.todo-item__text.container
+                    h3.todo-item__heading Услуга по монтажу
+                    p.todo-item__text
                         |Так же ты можешь <span class="bold">не заморачиваться</span> с монтажом, картинками и пр. Достаточно
                         |воспользоваться нашей услугой по монтажу видео! Все просто!
                 li.todo-item
-                    h3.todo-item__heading.container Получай доход за просмотры
-                    p.todo-item__text.container
+                    h3.todo-item__heading Получай доход за просмотры
+                    p.todo-item__text
                         |Так как канал уже раскручен, ты сразу имеешь просмотры и подписчиков, а значит и
                         |<span class="bold">доход</span>, но не забывай, что многое зависит от того, во что ты играешь и
                         |насколько ты агрессивно разносишь своих врагов! Зритель любит Экшн!
                 li.todo-item
-                    h3.todo-item__heading.container Выводи деньги и играй дальше!
-                    p.todo-item__text.container
+                    h3.todo-item__heading Выводи деньги и играй дальше!
+                    p.todo-item__text
                         |Это <span class="bold">все</span> что от тебя требуется!
 
         section.alpha.container
-            p.alpha__text
-                |Успевай стать альфа тестером нашего сервиса и после релиза мы обязательно о тебе 
-                |вспомним и отблагодарим! Будут <span class="bold">подарки</span> всем первым участникам!
-            a.btn(href="#form") ХОЧУ!
+            div.alpha__block
+                p.alpha__text
+                    |Успевай стать альфа тестером нашего сервиса и после релиза мы обязательно о тебе 
+                    |вспомним и отблагодарим! Будут <span class="bold">подарки</span> всем первым участникам!
+                a.btn(href="#form") ХОЧУ!
 
         section.subscribe.container#form
             div.paragraph
@@ -172,16 +174,17 @@ html(lang="ru")
                 label.subscribe__label.form__control(for="subscribe") Хочу получить уведомление о релизе
                 button.btn(onclick="lowerButton()") БУДУ ЖДАТЬ!
 
-        footer.page-footer.container
-            div.footer-social
-                p Подписывайтесь
-                div.social-block
-                    div.social.vk
-                    div.social.inst
-            div.footer-logo
-                div.logo
-                    img(src="assets/img/logo.svg" alt="X-Monedy")
-                p.footer-logo__text Играем и зарабатываем
+        footer.page-footer
+            div.container
+                div.footer-social
+                    p Подписывайтесь
+                    div.social-block
+                        div.social.vk
+                        div.social.inst
+                div.footer-logo
+                    div.logo
+                        img(src="assets/img/logo.svg" alt="X-Monedy")
+                    p.footer-logo__text Играем и зарабатываем
 
 
         // FIREBASE
