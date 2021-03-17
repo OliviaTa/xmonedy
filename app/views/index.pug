@@ -21,17 +21,17 @@ html(lang="ru")
         meta(name="msapplication-config" content="/assets/favicon/browserconfig.xml")
         meta(name="theme-color" content="#ffffff")
 
-        script(type='application/ld+json')
-            |{
-            |   "@context": "http://www.schema.org",
-            |   "@type": "WebSite",
-            |   "name": "X-Monedy",
-            |   "alternateName": "x-monedy",
-            |   "url": "https://x-monedy.com/",
-            |   "description": "Заработок с помощью компьютерных игр на YouTube",
-            |   "logo": "https://x-monedy.com/assets/img/logo.svg",
-            |   "image": "https://x-monedy.com/assets/img/logo.svg"
-            |}
+        script(type='application/ld+json').
+            {
+                "@context": "http://www.schema.org",
+                "@type": "WebSite",
+                "name": "X-Monedy",
+                "alternateName": "x-monedy",
+                "url": "https://x-monedy.com/",
+                "description": "Заработок с помощью компьютерных игр на YouTube",
+                "logo": "https://x-monedy.com/assets/img/logo.svg",
+                "image": "https://x-monedy.com/assets/img/logo.svg"
+            }
 
         // META END
 
@@ -47,27 +47,26 @@ html(lang="ru")
 
         title X-Monedy - зарабатывай просто играя в игры!
         link(rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon")
-        style
-            include ./style.css
+        link(rel="stylesheet" href="/css/style.min.css")
 
     body
         // Yandex.Metrika counter
-        script(type="text/javascript")
-            |(function (m, e, t, r, i, k, a) {
-            |   m[i] = m[i] || function () {
-            |       (m[i].a = m[i].a || []).push(arguments)
-            |   };
-            |   m[i].l = 1 * new Date();
-            |   k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-            |})
-            |(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-            |
-            |ym(72874123, "init", {
-            |   clickmap: true,
-            |   trackLinks: true,
-            |   accurateTrackBounce: true,
-            |   webvisor: true
-            |});
+        script(type="text/javascript").
+            (function (m, e, t, r, i, k, a) {
+                m[i] = m[i] || function () {
+                    (m[i].a = m[i].a || []).push(arguments)
+                };
+                m[i].l = 1 * new Date();
+                k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+            })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+            ym(72874123, "init", {
+                clickmap: true,
+                trackLinks: true,
+                accurateTrackBounce: true,
+                webvisor: true
+            });
         noscript
             div
                 img(src="https://mc.yandex.ru/watch/72874123" style="position:absolute; left:-9999px;" alt="")
@@ -193,7 +192,5 @@ html(lang="ru")
         script(src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js")
         script(src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js")
 
-        script
-            include ./index.js
-        script
-            include ./form.js
+        script(src="/js/index.min.js")
+        script(src="/js/form.min.js")

@@ -38,8 +38,7 @@ body {
   color: #ffffff;
   text-decoration: none;
   outline: unset;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
-    drop-shadow(0px 0px 20px #ff4545);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 0px 20px #ff4545);
 }
 
 .btn:hover,
@@ -83,7 +82,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("assets/img/pngwing.png") no-repeat;
+  background: url("/assets/img/pngwing.png") no-repeat;
   background-position: calc(100% - 20px) 70px;
   z-index: -1;
   filter: drop-shadow(0px 0px 250px #ffffff);
@@ -122,12 +121,12 @@ body {
 }
 
 .social.vk {
-  background-image: url("assets/icons/VK.svg");
+  background-image: url("/assets/icons/VK.svg");
   border-radius: 50%;
 }
 
 .social.inst {
-  background-image: url("assets/icons/Instagram.svg");
+  background-image: url("/assets/icons/Instagram.svg");
 }
 
 .top__heading {
@@ -230,7 +229,7 @@ body {
   top: 0;
   width: 20px;
   height: 20px;
-  background-image: url(assets/icons/mark.svg);
+  background-image: url("/assets/icons/mark.svg");
   border-radius: 50%;
   box-shadow: 0px 0px 4px #fc5245;
 }
@@ -403,6 +402,7 @@ body {
 .subscribe-form .error {
   border-color: #cc0000 !important;
 }
+
 .subscribe-form .success {
   border-color: #1dc602 !important;
 }
@@ -419,7 +419,7 @@ body {
   opacity: 0;
 }
 
-.form__custom-checkbox + label::before {
+.form__custom-checkbox+label::before {
   content: "";
   position: absolute;
   top: 5px;
@@ -432,8 +432,8 @@ body {
   border-radius: 4px;
 }
 
-.form__custom-checkbox:checked + label::before {
-  background: url("assets/icons/checked.svg") no-repeat center;
+.form__custom-checkbox:checked+label::before {
+  background: url("/assets/icons/checked.svg") no-repeat center;
 }
 
 .subscribe__label {
@@ -556,7 +556,7 @@ body {
 
 @media screen and (min-width: 1024px) {
   body {
-    background-image: url("assets/icons/line.svg");
+    background-image: url("/assets/icons/line.svg");
     background-repeat: repeat-x;
     background-position-y: 106px;
   }
@@ -683,7 +683,7 @@ body {
     left: 40px;
     width: 271px;
     height: 505px;
-    background-image: url("assets/img/pngwing1.png");
+    background-image: url("/assets/img/pngwing1.png");
     filter: drop-shadow(0px 0px 250px #FFFFFF);
   }
 
@@ -782,7 +782,7 @@ body {
     right: 40px;
     width: 311px;
     height: 522px;
-    background-image: url("assets/img/pngwing2.png");
+    background-image: url("/assets/img/pngwing2.png");
     filter: drop-shadow(0px 0px 250px #FFFFFF);
   }
 

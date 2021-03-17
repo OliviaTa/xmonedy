@@ -4,13 +4,23 @@
     "description": "",
     "main": "app.js",
     "devDependencies": {
+        "browser-sync": "2.26.14",
         "express": "4.17.1",
-        "firebase-tools": "9.5.0",
-        "nodemon": "^2.0.7"
+        "firebase-tools": "9.6.1",
+        "gulp": "4.0.2",
+        "gulp-clean-css": "4.3.0",
+        "gulp-less": "4.0.1",
+        "gulp-nodemon": "2.5.0",
+        "gulp-pug": "^4.0.1",
+        "gulp-rename": "2.0.0",
+        "gulp-uglify-es": "2.0.0",
+        "nodemon": "2.0.7",
+        "pug": "3.0.2"
     },
     "scripts": {
-        "start": "nodemon app.js",
-        "deploy": "firebase deploy"
+        "gulp:dev": "gulp dev",
+        "gulp:prod": "gulp prod",
+        "deploy": "rm -Rf public && npm run gulp:prod && firebase deploy"
     },
     "repository": {
         "type": "git",
@@ -21,8 +31,5 @@
     "bugs": {
         "url": "https://github.com/OliviaTa/xmonedy/issues"
     },
-    "homepage": "https://github.com/OliviaTa/xmonedy#readme",
-    "dependencies": {
-        "pug": "^3.0.2"
-    }
+    "homepage": "https://github.com/OliviaTa/xmonedy#readme"
 }
