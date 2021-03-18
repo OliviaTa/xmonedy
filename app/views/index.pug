@@ -45,11 +45,20 @@ html(lang="ru")
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet")
 
-        title X-Monedy - играй и зарабатывай!
+        title X-Monedy - играй в видеоигры и зарабатывай!
         link(rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon")
         link(rel="stylesheet" href="/css/style.min.css")
 
     body
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-191207953-1")
+        script(type="text/javascript").
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-191207953-1');
+
         // Yandex.Metrika counter
         script(type="text/javascript").
             (function (m, e, t, r, i, k, a) {
