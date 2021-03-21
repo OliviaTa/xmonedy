@@ -127,7 +127,7 @@ html(lang="ru")
             div.try-promo__block
                 p.try-promo__text
                     |<span class="bold">НО</span> что, если мы скажем, что от тебя нужно будет 
-                    |<span class="bold">только играть</span> и записывать игровой процесс на видео?<br>
+                    |<span class="bold">только играть</span> и записывать интересные видео, гайды, обзоры?<br>
                     |<span class="bold">Остальное мы берем на себя!</span>
                 a.btn(href="#form" onclick="upperButton()") Я ГОТОВ!
 
@@ -137,14 +137,16 @@ html(lang="ru")
                 li.todo-item
                     h3.todo-item__heading Запиши видео
                     p.todo-item__text
-                        |<span class="bold">Просто</span> сделай запись как ты играешь, придумай название для своего видео и краткое описание. Все!
+                        |<span class="bold">Просто</span> запиши интересное видео, напрмер гайд "Как получить меч бога в майнкрафте", придумай название для своего видео и краткое описание. Все!
                 li.todo-item
                     h3.todo-item__heading Зарегистрируйся и Добавь свое видео
                     p.todo-item__text
                         |Твое видео сразу добавится на раскрученный игровой канал. Ты сможешь получать деньги сразу за
                         |фактические просмотры по <span class="bold">правилам YouTube</span>, а не ждать, когда раскрутится
                         |твой канал.
+                        // https://support.google.com/youtube/answer/1311392#zippy=%2C%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B-adsense
                 li.todo-item
+                    //- добавить вопросик и написать что возможно такое будет
                     h3.todo-item__heading Услуга по монтажу
                     p.todo-item__text
                         |Так же ты можешь <span class="bold">не заморачиваться</span> с монтажом, картинками и пр. Достаточно
@@ -163,7 +165,7 @@ html(lang="ru")
         section.alpha.container
             div.alpha__block
                 p.alpha__text
-                    |Успевай стать альфа тестером нашего сервиса и после релиза мы обязательно о тебе 
+                    |<span class="bold">Успевай</span> стать альфа тестером нашего сервиса и после релиза мы обязательно о тебе 
                     |вспомним и отблагодарим! Будут <span class="bold">подарки</span> всем первым участникам!
                 a.btn(href="#form") ХОЧУ!
 
@@ -173,11 +175,11 @@ html(lang="ru")
                     |Наш проект сейчас находится в разработке и, если ты хочешь стать одним из первых его пользователей,
                     |просто оставь свой e-mail и мы оповестим тебя о запуске!
                 p
-                    |А если есть вопросы или предложения по проекту, то можешь смело писать их в поле "Ваш комментарий". 
-                    |Мы будем рады любой обратной связи! Спасибо!
+                    |А если есть вопросы или предложения по проекту, то смело пиши их в поле формы. 
+                    |Мы будем рады любой обратной связи!
             form.form.subscribe-form(onsubmit="formOnsubmit(event);")
                 input.form__control#email(type="email" name="email" placeholder="E-mail" required)
-                textarea.form__control#comment(name="comment" placeholder="Ваш комментарий")
+                textarea.form__control#comment(name="comment" placeholder="Остались вопросы или есть предложения?")
                 input.form__custom-checkbox#subscribe(type="checkbox" name="subscribe" checked)
                 label.subscribe__label.form__control(for="subscribe") Хочу получить уведомление о релизе
                 button.btn(onclick="lowerButton()") БУДУ ЖДАТЬ!
