@@ -1,20 +1,15 @@
 // Yandex.Metrika
 
-function upperButton() {
-    ym(72874123, 'reachGoal', 'upperButton');
+function reachGoalYM(key) {
+    ym(72874123, 'reachGoal', key);
     return true;
-}
-
-function lowerButton() {
-    ym(72874123, 'reachGoal', 'lowerButton');
-    return;
 }
 
 // slow scroll
 const anchors = document.querySelectorAll('a[href*="#"]');
 
 for (const anchor of anchors) {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
         const blockID = anchor.getAttribute('href').substr(1);

@@ -100,7 +100,7 @@ html(lang="ru")
                     li.top__action Играй в любимую игру
                     li.top__action Записывай интересные видео
                     li.top__action Зарабатывай и выводи деньги
-                a.btn(href="#form") 
+                a.btn(href="#form" onclick="reachGoalYM('btn_1')") 
                     span ХОЧУ ПОПРОБОВАТЬ!
 
         section.intro.container#intro
@@ -129,7 +129,7 @@ html(lang="ru")
                     |<span class="bold">НО</span> что, если мы скажем, что от тебя нужно будет 
                     |<span class="bold">только играть</span> и записывать интересные видео, гайды, обзоры?<br>
                     |<span class="bold">Остальное мы берем на себя!</span>
-                a.btn(href="#form" onclick="upperButton()") Я ГОТОВ!
+                a.btn(href="#form" onclick="reachGoalYM('btn_2')") Я ГОТОВ!
 
         section.todo.container#todo
             h2.todo__heading Как получить деньги начиная с <span class="bold">первого</span> видео на YouTube?
@@ -167,7 +167,7 @@ html(lang="ru")
                 p.alpha__text
                     |<span class="bold">Успевай</span> стать альфа тестером нашего сервиса и после релиза мы обязательно о тебе 
                     |вспомним и отблагодарим! Будут <span class="bold">подарки</span> всем первым участникам!
-                a.btn(href="#form") ХОЧУ!
+                a.btn(href="#form" onclick="reachGoalYM('btn_3')") ХОЧУ!
 
         section.subscribe.container#form
             div.paragraph
@@ -182,7 +182,7 @@ html(lang="ru")
                 textarea.form__control#comment(name="comment" placeholder="Остались вопросы или есть предложения?")
                 input.form__custom-checkbox#subscribe(type="checkbox" name="subscribe" checked)
                 label.subscribe__label.form__control(for="subscribe") Хочу получить уведомление о релизе
-                button.btn(onclick="lowerButton()") БУДУ ЖДАТЬ!
+                button.btn БУДУ ЖДАТЬ!
 
         footer.page-footer
             div.container
