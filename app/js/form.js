@@ -30,14 +30,22 @@ function formOnsubmit(event) {
 
   const { target: form } = event;
 
-  const clearErrorSuccess = () => {
-    email.classList.remove('error');
-    email.classList.remove('success');
-  }
+  const loadButton = () => {
+    button.disabled = true;
+    button.classList.add('disabled');
+    button.classList.add('loading');
+    button.innerText = '';
+  };
+
+  const successButton = () => {
+    button.classList.remove('loading');
+    button.innerText = 'Вы уже с нами!';
+  };
 
   const { email, comment, subscribe } = event.target;
+  const button = form.querySelector('.btn');
 
-  clearErrorSuccess();
+  loadButton();
 
   addUser({
     email: email.value,
@@ -45,11 +53,11 @@ function formOnsubmit(event) {
     subscribe: subscribe.checked
   }).then(x => {
     form.reset();
-    email.classList.add('success');
-    setTimeout(clearErrorSuccess, 2000);
+    console.log(event);
+    successButton();
   }).catch(error => {
-    email.classList.add('error');
-    setTimeout(clearErrorSuccess, 2000);
+    form.reset();
+    successButton();
   });
 }
 
