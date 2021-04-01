@@ -18,10 +18,11 @@ firebase.analytics();
 
 const addUser = firebase.functions().httpsCallable('addUser');
 const DBUsersCounter = firebase.database().ref('counter');
+let usersCount = 0;
 
 DBUsersCounter.on('value', (snapshot) => {
-  const count = snapshot.val();
-  console.log(`Count of active users: ${count}`);
+  usersCount = snapshot.val();
+  console.log(`Count of active users: ${usersCount}`);
 });
 
 // form processing
@@ -42,6 +43,16 @@ function formOnsubmit(event) {
     button.innerText = 'Вы уже с нами!';
   };
 
+  const showPopup = (msg) => {
+    const popup = document.querySelector('.popup');
+    const popupText = popup.querySelector('.popup__text');
+
+    popup.classList.add('show');
+    popupText.innerText = msg;
+  
+    setTimeout(() => popup.classList.remove('show'), 3000);
+  };
+
   const { email, comment, subscribe } = event.target;
   const button = form.querySelector('.btn');
 
@@ -55,6 +66,7 @@ function formOnsubmit(event) {
     form.reset();
     console.log(event);
     successButton();
+    showPopup(`Нас уже ${usersCount}. Спасибо за то что ты с нами.`);
   }).catch(error => {
     form.reset();
     successButton();

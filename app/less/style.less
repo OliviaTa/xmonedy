@@ -459,6 +459,39 @@ body {
   cursor: pointer;
 }
 
+.popup {
+  position: fixed;
+  top: -100%;
+  right: 15px;
+  width: 410px;
+  padding: 15px;
+  background-color: #811e1f;
+  border-radius: 4px;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25))
+    drop-shadow(0 0 8px #ff4545);
+  transition: top 0.3s;
+}
+
+.popup__heading {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.popup__text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.popup.show {
+  top: 15px;
+}
+
 .page-footer {
   padding-bottom: 60px;
 }
