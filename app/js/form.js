@@ -38,9 +38,9 @@ function formOnsubmit(event) {
     button.innerText = '';
   };
 
-  const successButton = () => {
+  const successButton = (msg) => {
     button.classList.remove('loading');
-    button.innerText = 'Вы уже с нами!';
+    button.innerText = msg;
   };
 
   const showPopup = (msg) => {
@@ -65,11 +65,11 @@ function formOnsubmit(event) {
   }).then(x => {
     form.reset();
     console.log(event);
-    successButton();
-    showPopup(`Нас уже ${usersCount}. Спасибо за то что ты с нами.`);
+    successButton('Вы с нами!');
+    showPopup(`Нас уже ${usersCount}. Спасибо за то что вы с нами.`);
   }).catch(error => {
     form.reset();
-    successButton();
+    successButton('Вы уже с нами!');
   });
 }
 
